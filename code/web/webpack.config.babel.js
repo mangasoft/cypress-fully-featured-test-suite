@@ -1,6 +1,6 @@
 // Imports
-import path from 'path'
-import Dotenv from 'dotenv-webpack'
+const path = require('path');
+const Dotenv = require('dotenv-webpack');
 
 const config = {
   entry: {
@@ -17,7 +17,7 @@ const config = {
       {
         test: /\.jsx?$/,
         use: {
-          loader: 'babel-loader',
+          loader: 'babel-loader'
         },
         exclude: /node_modules/
       }
@@ -27,18 +27,22 @@ const config = {
   optimization: {
     splitChunks: {
       cacheGroups: {
-        commons: { test: /[\\/]node_modules[\\/]/, name: 'vendor', chunks: 'all' }
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendor',
+          chunks: 'all'
+        }
       }
     }
   },
 
-  plugins: [
-    new Dotenv()
-  ],
+  plugins: [new Dotenv()],
 
   node: {
-    fs: "empty"
+    fs: 'empty'
   }
-}
+};
 
-export default config
+// export default config;
+
+module.exports = config;
