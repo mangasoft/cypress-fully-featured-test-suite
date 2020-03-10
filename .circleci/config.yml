@@ -8,6 +8,7 @@ workflows:
       - cypress/run:
           requires:
             - cypress/install
+          command: npx cypress run
           record: true
           parallel: true
           parallelism: 2
