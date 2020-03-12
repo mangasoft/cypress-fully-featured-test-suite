@@ -8,8 +8,8 @@ workflows:
       - cypress/run:
           requires:
             - cypress/install
-          command: npx cypress run --parallel
-          record: false
+          command: npx cypress run --parallel --record
+          record: true
           parallel: true
           parallelism: 2
           group: 2 machines

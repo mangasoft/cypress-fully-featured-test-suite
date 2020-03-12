@@ -7,5 +7,6 @@
   "responseTimeout": 10000,
   "trashAssetsBeforeRuns": true,
   "video": false,
-  "chromeWebSecurity": false
+  "chromeWebSecurity": false,
+  "projectId": "9x9s4n"
 }
