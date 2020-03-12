@@ -1,6 +1,7 @@
 {
   "$schema": "https://on.cypress.io/cypress.schema.json",
   "baseUrl": "https://crate-react-web.herokuapp.com",
+  "apiBaseUrl": "https://crate-graphql-api.herokuapp.com",
   "defaultCommandTimeout": 10000,
   "pageLoadTimeout": 60000,
   "requestTimeout": 10000,

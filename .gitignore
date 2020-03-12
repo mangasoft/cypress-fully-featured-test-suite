@@ -5,3 +5,7 @@
 node_modules
 coverage
 .nyc_output
+
+#reports
+cypress/results/junit
+cypress/results/report/mochawesome.json
