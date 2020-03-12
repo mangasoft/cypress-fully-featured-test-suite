@@ -24,7 +24,8 @@
     "mocha": "./node_modules/.bin/cypress run --reporter cypress-multi-reporters --reporter-options configFile=reporter-config.json",
     "merge": "./node_modules/.bin/mochawesome-merge --reportDir cypress/results/mocha > cypress/results/report/mochawesome.json",
     "generate": "npx mochawesome-report-generator --reportDir cypress/results/report --cdn true --charts true cypress/results/report/mochawesome.json && rm -rf cypress/results/mocha",
-    "test": "npm run delete:reports & npm run mocha && npm run merge && npm run generate"
+    "test": "npm run delete:reports & npm run mocha && npm run merge && npm run generate",
+    "cy:run:ci": "npx cypress run --parallel --record --reporter cypress-multi-reporters --reporter-options configFile=reporter-config.json"
   },
   "keywords": [],
   "author": "",
