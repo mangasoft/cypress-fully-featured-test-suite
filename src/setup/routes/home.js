@@ -1,9 +1,9 @@
 // App Imports
-import Home from '../../modules/pages/Home'
-import Men from '../../modules/pages/Men'
-import Women from '../../modules/pages/Women'
-import HowItWorks from '../../modules/pages/HowItWorks'
-import WhatsNew from '../../modules/pages/WhatsNew'
+import Home from '../../modules/pages/Home';
+import Men from '../../modules/pages/Men';
+import Women from '../../modules/pages/Women';
+import HowItWorks from '../../modules/pages/HowItWorks';
+import WhatsNew from '../../modules/pages/WhatsNew';
 
 // Home routes
 export default {
@@ -32,4 +32,4 @@ export default {
     path: '/whats-new',
     component: WhatsNew
   }
-}
+};
