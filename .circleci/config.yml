@@ -17,8 +17,8 @@ workflows:
             npm run merge
             npm run generate
           record: true
-          parallel: true
-          parallelism: 2
+          # parallel: true
+          # parallelism: 2
           group: 'all tests'
           post-steps:
             - store_test_results:
