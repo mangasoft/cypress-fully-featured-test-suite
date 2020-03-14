@@ -3,7 +3,6 @@ import './commands';
 
 before(() => {
   cy.task('resetCoverage');
-  cy.wait(1500);
 });
 
 afterEach(() => {
