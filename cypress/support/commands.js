@@ -20,3 +20,26 @@ Cypress.Commands.add('startApi', () => {
     expect(response.status).to.eq(200);
   });
 });
+
+Cypress.Commands.add('login', () => {
+  cy.request({
+    url: Cypress.config().apiBaseUrl,
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json;charset=UTF-8' },
+    body: {
+      query:
+        'query ($email: String, $password: String) { userLogin (email: $email, password: $password) { user {name, email, role}, token } }',
+      variables: {
+        email: Cypress.config().email,
+        password: Cypress.config().password
+      }
+    }
+  })
+    .its('body.data.userLogin')
+    .should('exist')
+    .then(data => {
+      localStorage.setItem('token', data.token);
+      localStorage.setItem('user', JSON.stringify(data.user));
+    });
+  cy.visit('/');
+});
