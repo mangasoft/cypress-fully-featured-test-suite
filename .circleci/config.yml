@@ -13,7 +13,6 @@ workflows:
           requires:
             - cypress/install
           command: |
-            npm run start:app
             npm run cy:run:ci
             npm run merge
             npm run generate
