@@ -9,3 +9,7 @@ coverage
 #reports
 cypress/results/junit
 cypress/results/report/mochawesome.json
+cypress/results/report/mochawesome.html
+
+cypress/screenshots
+cypress/videos

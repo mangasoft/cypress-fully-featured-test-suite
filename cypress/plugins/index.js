@@ -45,6 +45,20 @@ const { join } = require('path');
 const { existsSync, mkdirSync, writeFileSync } = require('fs');
 const execa = require('execa');
 
+const fs = require('fs-extra');
+const path = require('path');
+
+function getConfigurationByFile(file) {
+  const pathToConfigFile = path.resolve(
+    __dirname,
+    '..',
+    'config',
+    `${file}.json`
+  );
+
+  return fs.readJson(pathToConfigFile);
+}
+
 module.exports = (on, config) => {
   let coverageMap = istanbul.createCoverageMap({});
   const outputFolder = '.nyc_output';
@@ -85,4 +99,7 @@ module.exports = (on, config) => {
       return execa('npm', ['run', 'report:coverage'], { stdio: 'inherit' });
     }
   });
+
+  const file = config.env.configFile;
+  return getConfigurationByFile(file);
 };

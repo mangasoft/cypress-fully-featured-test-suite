@@ -1,7 +1,7 @@
 {
   "$schema": "https://on.cypress.io/cypress.schema.json",
-  "baseUrl": "https://crate-react-web.herokuapp.com",
-  "apiBaseUrl": "https://crate-graphql-api.herokuapp.com",
+  "baseUrl": "http://localhost:3000",
+  "apiBaseUrl": "http://localhost:8000",
   "defaultCommandTimeout": 10000,
   "pageLoadTimeout": 80000,
   "requestTimeout": 80000,
@@ -9,5 +9,7 @@
   "trashAssetsBeforeRuns": true,
   "video": false,
   "chromeWebSecurity": false,
-  "projectId": "jp6g13"
+  "projectId": "jp6g13",
+  "email": "cypress@crate.com",
+  "password": "Pass1234"
 }
