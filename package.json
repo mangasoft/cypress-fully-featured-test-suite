@@ -23,9 +23,9 @@
     "mochawesome-report-generator": "^4.0.1"
   },
   "scripts": {
-    "cy:run:dev": "node_modules/.bin/cypress run --env configFile=dev",
-    "cy:run:prod": "node_modules/.bin/cypress run --env configFile=prod",
-    "cy:open": "node_modules/.bin/cypress open --env configFile=dev",
+    "cy:run:dev": "./node_modules/.bin/cypress run --env configFile=dev",
+    "cy:run:prod": "./node_modules/.bin/cypress run --env configFile=prod",
+    "cy:open": "./node_modules/.bin/cypress open --env configFile=dev",
     "report:coverage": "nyc report --reporter=html",
     "delete:reports": "rm -f cypress/results/report/mocha* || true",
     "prereport": "npm run delete:reports",
@@ -33,6 +33,6 @@
     "merge": "./node_modules/.bin/mochawesome-merge --reportDir cypress/results/mocha > cypress/results/report/mochawesome.json",
     "generate": "npx mochawesome-report-generator --reportDir cypress/results/report --cdn true --charts true cypress/results/report/mochawesome.json && rm -rf cypress/results/mocha",
     "test": "npm run delete:reports & npm run mocha && npm run merge && npm run generate",
-    "cy:run:ci": "npx cypress run --env configFile=prod --record --reporter cypress-multi-reporters --reporter-options configFile=reporter-config.json"
+    "cy:run:ci": "./node_modules/.bin/cypress run --env configFile=prod --record --reporter cypress-multi-reporters --reporter-options configFile=reporter-config.json"
   }
 }
