@@ -1,1 +1,5 @@
-This is black file created on purpose
+This is blank file created on purpose
+because empty folders cannot be committed to Git.
+
+This empty folder is needed to export test-results
+which are generated after every test run.
