@@ -3,6 +3,8 @@ import './commands';
 
 before(() => {
   cy.task('resetCoverage');
+  cy.startWeb();
+  cy.startApi();
 });
 
 afterEach(() => {
